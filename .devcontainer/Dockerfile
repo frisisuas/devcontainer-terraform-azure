@@ -38,9 +38,9 @@ RUN if [ "${INSTALL_AZURE_CLI}" = "true" ]; then bash /tmp/library-scripts/azcli
     && rm -rf /var/lib/apt/lists/*
 
 # Install Terraform, tflint, Terragrunt
-ARG TERRAFORM_VERSION=0.12.16
-ARG TFLINT_VERSION=0.8.2
-ARG TERRAGRUNT_VERSION=0.28.1
+ARG TERRAFORM_VERSION=1.5.5
+ARG TFLINT_VERSION=0.48.0
+ARG TERRAGRUNT_VERSION=0.51.9
 RUN bash /tmp/library-scripts/terraform-debian.sh "${TERRAFORM_VERSION}" "${TFLINT_VERSION}" "${TERRAGRUNT_VERSION}" \
     && rm -rf /tmp/library-scripts
 
